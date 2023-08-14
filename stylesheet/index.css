@@ -2,9 +2,32 @@
 body{
     background-color: #000;
     color: #fff;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    border: 10px solid transparent
+    
+}
+header{
+    border: 50px solid #0a5dcae7;
+    font-size: 100px;
+    word-wrap: break-word;
+    
+    
+    
 }
 a{
-    font: 500px sans-serif;
+  
+    font-size: 50px;
+    color: #00e5ff;
+ 
+}
+warning{
+  
+    font-size: 25px;
+    color: #ff2f00;
+
+    
+    
     
 }
 
