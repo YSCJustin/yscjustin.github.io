@@ -8,5 +8,5 @@ function checkAElement() {
         setTimeout(checkAElement, 50);
     }
 }
-
+ 
 checkAElement(); 
