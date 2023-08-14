@@ -1,1 +1,3 @@
-alert("real")
+window.onload(() => {
+    alert('Hello World!');
+})
