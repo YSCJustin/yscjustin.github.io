@@ -1,10 +1,10 @@
 
 body{
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000; */
+    /* color: #fff; */
     font-family: sans-serif;
     word-wrap: break-word;
-    border: 10px solid transparent
+    border: 50px solid transparent;
     
 }
 header{
@@ -15,7 +15,7 @@ header{
     
     
 }
-a{
+p{
   
     font-size: 50px;
     color: #00e5ff;
@@ -29,4 +29,69 @@ h1{
     
     
 }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        z-index: 9999;
+        margin-top: 70px;
+      }
+      .content.shift {
+        margin-left: 250px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+
+        text-decoration: none;
+      }
+  
+ 
+      .content {
+        margin-left: 0px;
+        padding: 20px;
+        transition: all 0.3s ease-in-out;
+    
+      }
+  
+   
+      .menu-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        z-index: 9999;
+        
+      }
+  
+      .sidebar.open {
+        left: 0;
+      }
+      .menu-btn:hover {
+        background-color: #555;
+      }
+  
+    
+      .menu-btn.open {
+        transform: rotate(180deg);
+      }
+      
 
