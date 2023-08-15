@@ -7,16 +7,5 @@ menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open');
   content.classList.toggle('shift');
 });
-function checkAElement() {
-    var aElement = document.querySelector('a');
-    if (aElement) {
-        setTimeout(function() {
-            alert("real!");
-        }, 50); 
-    } else {
-        setTimeout(checkAElement, 50);
-    }
-}
- 
-checkAElement(); 
+
 
