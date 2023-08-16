@@ -1,0 +1,20 @@
+theme: jekyll-theme-minimal
+title: YSCJustin
+description: real projects 🗿🗿
+author: Justin Yeung
+social-network-links:
+  github: YSCJustin
+
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
