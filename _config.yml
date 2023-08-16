@@ -3,8 +3,7 @@ title: YSCJustin
 description: real projects 🗿🗿
 author: Justin Yeung
 markdown: kramdown
-social-network-links:
-  github: YSCJustin
+
 
 exclude:
   - CHANGELOG.md
