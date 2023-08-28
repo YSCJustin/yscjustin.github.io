@@ -4,7 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/pico.min.css">
-    <script src="/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const year = document.getElementById("year");
+        const date = new Date();
+        year.innerText = date.getFullYear();
+        const randomButton = document.getElementById("randomButton");
+        randomButton.addEventListener("click", () => {
+        randomButton.setAttribute("aria-busy", true)
+        randomButton.innerHTML=" Loading..."
+        randomButton.classList.add("secondary")
+
+    })
+      })
+    </script>
     <title>YSCJustin</title>
   </head>
   
