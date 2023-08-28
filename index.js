@@ -25,19 +25,20 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
           let randomWord = words[Math.floor(Math.random() * words.length)]
           let format = formats[Math.floor(Math.random() * formats.length)]
           progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
-            if(progressBar.value >= 100){
-                progressBarSpan.innerHTML = ""
-                progressBar.removeAttribute("value")
-                progressBar.removeAttribute("max")
-                const delayTime = Math.floor(Math.random() * 5) + 1
-                await delay(delayTime*1000)
-                progressBar.setAttribute("value", 0)
-                progressBar.setAttribute("max", 100)
-                let randomWord = words[Math.floor(Math.random() * words.length)]
-                let format = formats[Math.floor(Math.random() * formats.length)]
-                progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
-            }
+            // if(progressBar.value >= 100){
+            //     progressBarSpan.innerHTML = ""
+            //     progressBar.removeAttribute("value")
+            //     progressBar.removeAttribute("max")
+            //     const delayTime = Math.floor(Math.random() * 5) + 1
+            //     await delay(delayTime*1000)
+            //     progressBar.setAttribute("value", 0)
+            //     progressBar.setAttribute("max", 100)
+            //     let randomWord = words[Math.floor(Math.random() * words.length)]
+            //     let format = formats[Math.floor(Math.random() * formats.length)]
+            //     progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
+            // }
         } else if(progressBar.value >= 100){
+        
             progressBarSpan.innerHTML = ""
             progressBar.removeAttribute("value")
             progressBar.removeAttribute("max")
