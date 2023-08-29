@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
-
+  const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  if(prefersDarkMode){
+    const html = document.querySelector("html")
+    html.setAttribute("data-theme", "dark")
+  } else {
+    const html = document.querySelector("html")
+    html.setAttribute("data-theme", "light")
+  }
 
 let words = [];
 let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "java", "c", "ts", "tsx", "jsx", "rb", "go"]
@@ -17,7 +24,7 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
   let format = formats[Math.floor(Math.random() * formats.length)]
   progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
     async function progressUpdate(){
-      const time = Math.floor(Math.random() * 4) + 2
+      const time = Math.floor(Math.random() * 45) + 6
       setTimeout(async () => {
         
         const random = Math.floor(Math.random() * 30)+1
@@ -43,7 +50,7 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
             progressBarSpan.innerHTML = ""
             progressBar.removeAttribute("value")
             progressBar.removeAttribute("max")
-            const delayTime = Math.floor(Math.random() * 5) + 2
+            const delayTime = Math.floor(Math.random() * 5) + 3
             await delay(delayTime*1000)
             progressBar.setAttribute("value", 0)
             progressBar.setAttribute("max", 100)
@@ -52,14 +59,25 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
             progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
         }
         await progressUpdate()
-      }, time*1020)
+      }, time/10*1020)
     }
     progressUpdate()
 
-    randomButton.addEventListener("click", () => {
+    randomButton.addEventListener("click", async () => {
         randomButton.setAttribute("aria-busy", true)
         randomButton.innerHTML=" Loading..."
         randomButton.classList.add("secondary")
+        await delay(500)
+        randomButton.setAttribute("aria-busy", false)
+        randomButton.innerHTML=" Click me?"
+        randomButton.classList.remove("secondary")
+        const html = document.querySelector("html")
 
+        if(html.getAttribute("data-theme") == "light"){
+          html.setAttribute("data-theme", "dark")
+        } else {
+          html.setAttribute("data-theme", "light")
+        }
+        
     })
 })
