@@ -17,9 +17,10 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
   let format = formats[Math.floor(Math.random() * formats.length)]
   progressBarSpan.innerHTML = progressBar.value + "% " + `Downloading   <strong>${randomWord.toUpperCase()}.${format}</strong>`
     async function progressUpdate(){
-        const time = Math.floor(Math.random() * 3) + 2
+      const time = Math.floor(Math.random() * 4) + 2
       setTimeout(async () => {
-        const random = Math.floor(Math.random() * 25)+1
+        
+        const random = Math.floor(Math.random() * 30)+1
         if(progressBar.value < 100 && progressBar.hasAttribute("value")){
             progressBar.value += random
           let randomWord = words[Math.floor(Math.random() * words.length)]
@@ -42,7 +43,7 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
             progressBarSpan.innerHTML = ""
             progressBar.removeAttribute("value")
             progressBar.removeAttribute("max")
-            const delayTime = Math.floor(Math.random() * 5) + 1
+            const delayTime = Math.floor(Math.random() * 5) + 2
             await delay(delayTime*1000)
             progressBar.setAttribute("value", 0)
             progressBar.setAttribute("max", 100)
