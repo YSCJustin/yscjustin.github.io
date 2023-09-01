@@ -55,6 +55,66 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
       }, time/10*1020)
     }
     progressUpdate()
+      // Get the modal background and modal box elements
 
+
+
+
+
+
+    let data = {}
+     await fetch('./data/data.json').then(response => response.json()).then(json => data = json);
+
+        const shouldShowModal = data.modalActivate;
+     
+        if (shouldShowModal) {
+
+
+        // Get the modal background and modal box elements
+        const modalBackground = document.querySelector('.modal-background');
+        const modalBox = document.querySelector('.modal-box');
+
+        // Get the close button element
+        const closeButton = document.querySelector('.close-button');
+          const title = document.querySelector('.title');
+          title.innerHTML = data.modal.title
+          const content = document.querySelector('.content');
+          content.innerHTML = data.modal.content
+
+        // Add an event listener to the modal background
+          modalBackground.style.display = 'flex';
+          modalBox.style.display = 'block';
+          modalBackground.classList.add('show');
+          modalBox.classList.add('show');
+          // Enable scrolling and clicking on the page
+          document.body.style.overflow = 'hidden';
+
+        // Add an event listener to the close button
+        closeButton.addEventListener('click', async () => {
+          modalBackground.classList.remove('show');
+          modalBox.classList.remove('show');
+
+          // Hide the modal background and modal box
+          modalBackground.style.display = 'none';
+          modalBox.style.display = 'none';
+
+          // Enable scrolling and clicking on the page
+          document.body.style.overflow = 'auto';
+          document.body.style.pointerEvents = 'auto';
+
+        });
+
+        // Show the modal background and modal box
+
+
+      } else {
+        const modalBackground = document.querySelector('.modal-background');
+        const modalBox = document.querySelector('.modal-box');
+        modalBackground.style.display = 'none';
+        modalBox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        document.body.style.pointerEvents = 'auto';
+      }
+ 
 
 })

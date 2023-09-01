@@ -2574,6 +2574,55 @@ a[aria-busy=true], button[aria-busy=true], input[type=button][aria-busy=true], i
         transition-duration: 0s !important
     }
 }
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  /* Style the modal box */
+
+
+  /* Style the close button */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor:all-scroll;
+  }
+.modal-box {
+    display: none;
+    position: relative;
+    z-index: 2;
+    background-color: var(--muted-border-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .modal-background.show {
+    opacity: 1;
+  }
+
+  .modal-box.show {
+    opacity: 1;
+  }
+
+
 #github{
     font-size:35px;
 }
