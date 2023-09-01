@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-  if(prefersDarkMode){
-    const html = document.querySelector("html")
-    html.setAttribute("data-theme", "dark")
-  } else {
-    const html = document.querySelector("html")
-    html.setAttribute("data-theme", "light")
-  }
+
 
 let words = [];
 let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "java", "c", "ts", "tsx", "jsx", "rb", "go"]
@@ -18,7 +11,7 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
 
     const progressBar = document.querySelector("#pro1")
     const progressBarSpan = document.querySelector("#pro2")
-    const randomButton = document.querySelector("#randomButton")
+
   const delay = ms => new Promise(res => setTimeout(res, ms));
   let randomWord = words[Math.floor(Math.random() * words.length)]
   let format = formats[Math.floor(Math.random() * formats.length)]
@@ -63,21 +56,5 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
     }
     progressUpdate()
 
-    randomButton.addEventListener("click", async () => {
-        randomButton.setAttribute("aria-busy", true)
-        randomButton.innerHTML=" Loading..."
-        randomButton.classList.add("secondary")
-        await delay(500)
-        randomButton.setAttribute("aria-busy", false)
-        randomButton.innerHTML=" Click me?"
-        randomButton.classList.remove("secondary")
-        const html = document.querySelector("html")
 
-        if(html.getAttribute("data-theme") == "light"){
-          html.setAttribute("data-theme", "dark")
-        } else {
-          html.setAttribute("data-theme", "light")
-        }
-        
-    })
 })
