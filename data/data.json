@@ -1,5 +1,5 @@
 {
-    "modalActivate": true,
+    "modalActivate": false,
     "modal":{
         "title": "Why",
         "content": "Why do I have to learn Chinese in PUTONGHUA"

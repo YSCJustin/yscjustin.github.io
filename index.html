@@ -3,39 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="../css/pico.min.css">
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        const year = document.getElementById("year");
+        const date = new Date();
+        year.innerText = date.getFullYear();
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-
-<link rel="manifest" href="/img/site.webmanifest">
-    <script src="/index.js"></script>
+      })
+    </script>
     <title>YSCJustin</title>
   </head>
   
   <body>
-    
     <main class="container">
-      <div class="modal-background">
-        <div class="modal-box" style="text-align: center;">
-          <span class="close-button">&times;</span>
-          <h1 style="font-size:30px; margin-bottom:24px"><span class="title"></span></h1>
-          <span class="content"></span>
-         
-        </div>
-      </div>
         <nav>
             <ul>
               <li><strong>Real</strong></li>
             </ul>
-            <ul> 
-                
-            <li><a href="#">Home</a></li>
+            <ul>
+            <li><a href="/">Home</a></li>
               <li><a href="/projects/">Projects</a></li>
-              <li> <a  href="https://github.com/YSCJustin" >  
+              <li> <a  href="https://github.com/YSCJustin" >
                 <i class="fa fa-github" id="github"></i>
                   
               </a></li>
@@ -44,23 +40,22 @@
                   <i class='fa fa-envelope' style="font-size: 30px;"></i>
                 </a>
               </li>
-
             </ul>
           </nav>
-          
+          <h1>Justin Yeung</h1>
+          <p>You might be thinking "<strong>how did i stumble upon this website?</strong>"<br>I don't know. Meanwhile, check out some of my projects</p>
+          <a href="/projects/" role="button">Projects</a>
+          <br>
+          <br>
+          <p>This page is actually another version of the current 404 page, which is significantly better than this one. Try it out by going to a <a href="/goofy">page that doesn't exist</a>.</p>
+          <br>
+       
+          <footer><hr><p><small>YSCJustin <span id="year"></span></small></p></footer> 
         </main>
-    <main class="container">
-        <h4>Truly the most real website of all time.<br>Sadly, there is nothing to do here.</h4>
-        <p>Check out some projects instead.</p>
-  
-        <a href="/projects/" role="button">Projects</a>
-        
-        <p><br><br>Or simply do nothing. It's your choice. You could look at this loading bar for downloading files while you are here.</p>
-        <progress id="pro1"value="0" max="100"></progress> 
-        <p><small><span id="pro2"></span></small></p>
+   
 
-        <footer><hr><p><small>YSCJustin <span id="year"></span></small></p></footer> 
-    </main>
+
+
     
   </body>
 </html>
