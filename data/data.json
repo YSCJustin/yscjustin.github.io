@@ -1,7 +1,7 @@
 {
     "modalActivate": true,
     "modal":{
-        "title": "This thing will appear everytime you open this page",
-        "content": "and I am not removing it because I am too lazy.<br>Proceed to exit by clicking the X"
+        "title": "Why",
+        "content": "Why do I have to learn Chinese in PUTONGHUA"
     }
 }
