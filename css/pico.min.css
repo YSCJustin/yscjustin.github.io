@@ -188,6 +188,7 @@ kbd {
 
 :root:not([data-theme=dark]), [data-theme=light] {
     --background-color: #fff;
+    --modal-color: rgba(255,255,255,0.5);
     --color: hsl(205, 20%, 32%);
     --h1-color: hsl(205, 30%, 15%);
     --h2-color: #24333e;
@@ -287,6 +288,7 @@ kbd {
 @media only screen and (prefers-color-scheme:dark) {
     :root:not([data-theme]) {
         --background-color: #11191f;
+        --modal-color: rgba(0,0,0,0.5);
         --color: hsl(205, 16%, 77%);
         --h1-color: hsl(205, 20%, 94%);
         --h2-color: #e1e6eb;
@@ -387,6 +389,7 @@ kbd {
 
 [data-theme=dark] {
     --background-color: #11191f;
+    --modal-color: rgba(0,0,0,0.5);
     --color: hsl(205, 16%, 77%);
     --h1-color: hsl(205, 20%, 94%);
     --h2-color: #e1e6eb;
@@ -2581,7 +2584,7 @@ a[aria-busy=true], button[aria-busy=true], input[type=button][aria-busy=true], i
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--modal-color);
     z-index: 1;
     display: flex;
     justify-content: center;
