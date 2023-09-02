@@ -2599,7 +2599,7 @@ a[aria-busy=true], button[aria-busy=true], input[type=button][aria-busy=true], i
     top: 10px;
     right: 20px;
     font-size: 20px;
-    cursor:all-scroll;
+    cursor: pointer;
   }
 .modal-box {
     display: none;
