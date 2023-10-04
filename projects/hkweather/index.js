@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const lastUpdated = document.querySelector("#lastupdated");
     const introduce = document.querySelector("#introduce");
     let hkodata;
+    let secondarydata;
    await weatherData("en");
 
 
@@ -48,6 +49,28 @@ document.addEventListener("DOMContentLoaded", async () => {
          
     }
     if(!typhoon){
+        await fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warninginfo&lang=${language}`).then(response => response.json()).then(data => {secondarydata = data})
+        for(let i = 0; i < secondarydata.details.length; i++) {
+            if(secondarydata.details[i].warningStatementCode === "WTCSGNL"){
+                let data = ""
+                for(let j = 0; j < secondarydata.details[i].contents.length; j++){
+                    data += secondarydata.details[i].contents[j] + "<br>";
+
+                }
+                typhoon = true;
+                typhoonElement.innerHTML = data;
+                const date = new Date(secondarydata.details[i].updateTime);
+                if(language === "tc"){
+                    lastUpdated.innerHTML = `最後更新： ${date.toLocaleString("zh-Hant")}`;
+                } else {
+                    lastUpdated.innerHTML = `Last Updated: ${date.toLocaleString("en")}`;
+                }
+                break;
+            }
+        } 
+    }  
+    if(!typhoon){
+
         if(language === "tc"){
             typhoonElement.innerHTML = "現時沒有熱帶氣旋";
         } else {
