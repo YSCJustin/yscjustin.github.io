@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/pico.min.css">
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        const year = document.getElementById("year");
+        const date = new Date();
+        year.innerText = date.getFullYear();
+
+
+      })
+    </script>
+    <script src="./index.js"></script>
+    <title>Weather Project</title>
+  </head>
+  
+  <body>
+    <main class="container">
+        <nav>
+            <ul>
+              <li><strong>Real</strong></li>
+            </ul>
+            <ul>
+            <li><a href="/">Home</a></li>
+              <li><a href="/projects/">Projects</a></li>
+              <li> <a  href="https://github.com/YSCJustin" >
+                <i class="fa fa-github" id="github"></i>
+                  
+              </a></li>
+              <li>
+                <a href="mailto:goofy@yscjustin.dev">
+                  <i class='fa fa-envelope' style="font-size: 30px;"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <h2 style="text-align: center;" id="title">Weather Project</h2>
+          <p style="text-align: center;" id="introduce">The website without his analysis. which is bad</p>
+          <button id="lang" class="en" style="width:30%; display:block;margin:auto; font-size:20px">轉做中文</button>
+          <article>
+            <p id="typhoon" style="line-height: 35px; font-size:20px"></p>
+            <footer><p><strong><span id="lastupdated" style="font-size:20px"></span></strong></p></footer>
+          </article>
+          <br>
+          <footer><hr><p><small>YSCJustin <span id="year"></span></small><strong><br>Shoutout to Tristan Tsang</p></strong></footer> 
+        </main>
+   
+
+
+
+    
+  </body>
+</html>
