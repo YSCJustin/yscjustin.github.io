@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if(language === "tc"){
         introduce.textContent = "沒有他分析的網站，就是不完整的天氣預報。"
     } else {
-        introduce.textContent = "The website without his analysis, which is bad."
+        introduce.textContent = "The website without his analysis, which is very bad."
     }
     for(let i = 0; i < hkodata.swt.length; i++) {
 
