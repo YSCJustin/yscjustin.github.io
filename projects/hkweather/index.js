@@ -124,12 +124,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 //set weatherChart source
 const times = ["02", "08", "14", "20"];
 const now = new Date();
+let newDay = false;
 let year = now.getFullYear();
 let hour = String(now.getHours()).padStart(2, '0');
 if(parseInt(hour) < 2){
     now.setDate(now.getDate() - 1);
     //set hour to 20
-    hour = "20";
+    newDay = true;
     year = now.getFullYear();
 
 }
@@ -137,6 +138,7 @@ now.setDate(now.getDate() -7);
 let month = String(now.getMonth() + 1).padStart(2, '0');
 let day = String(now.getDate()).padStart(2, '0');
 hour = String(now.getHours()).padStart(2, '0');
+if(newDay) hour = "20";
 
 
 
