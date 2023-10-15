@@ -63,7 +63,8 @@ let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "ja
 
 
     let data = {}
-     await fetch('./data/data.json').then(response => response.json()).then(json => data = json);
+  
+     await fetch('/words.json').then(response => response.json()).then(json => data = json);
 
         const shouldShowModal = data.modalActivate;
      
