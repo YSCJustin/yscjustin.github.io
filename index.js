@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 let words = [];
 let formats = ["js", "json", "html", "css", "php", "cpp", "md", "txt", "py", "java", "c", "ts", "tsx", "jsx", "rb", "go"]
-  await fetch('words.json').then(response => response.json()).then(data => words = data);
+  await fetch('/words.json').then(response => response.json()).then(data => words = data);
 
     const year = document.querySelector("#year")
     const date = new Date()
