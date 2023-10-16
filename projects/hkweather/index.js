@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if(!typhoon){
         await fetch(`https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warninginfo&lang=${language}`).then(response => response.json()).then(data => {secondarydata = data})
+        if(secondarydata.details) {
         for(let i = 0; i < secondarydata.details.length; i++) {
             if(secondarydata.details[i].warningStatementCode === "WTCSGNL"){
                 let data = ""
@@ -105,6 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         } 
     }  
+}
     if(!typhoon){
 
         if(language === "tc"){
