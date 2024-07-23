@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Find School (HK)">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Find School (HK)</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Find School gogogo</h1>
+    <section class="center-element">
+        <select name="District" id="district" >
+            <option value="">District</option>
+        </select>
+        <select name="Gender" id="gender">
+            <option value="">Gender</option>
+        </select>
+        <select name="School Level" id="level">
+            <option value="">School Level</option>
+        </select>
+    <select name="Category" id="category" >
+        <option value="">Category</option>
+    </select>
+    <select name="Finance Type" id="finance">
+        <option value="">Finance Type</option>
+    </select>
+    <select name="Session" id="session">
+        <option value="">Session</option>
+    </select>
+
+    <select name="Religion" id="religion">
+        <option value="">Religion</option>
+    </select>
+    </section>
+    <br>
+
+    <section class="center-element">
+    <input id="name" placeholder="School Name/Acronym">
+    <input type="checkbox" id="acro" style="margin: 10px">
+    <label for="acro">Acronym?</label>
+    <button id="search" style="margin: 10px">Search!</button>
+    </section>
+<h1 style='text-align: center;'>Find Information about a school! (USING ID)</h1>
+    <section class='center-element'>
+        <br>
+        <input id="id" placeholder="School ID">
+        <button id="searchID" style="margin: 10px">Search!</button>
+        
+    </section>
+    <br>
+    <br>
+    <div id="result" style="margin: 80px; margin-top: 0"></div>
+</body>
+</html>
