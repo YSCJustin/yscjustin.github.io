@@ -183,6 +183,8 @@ h1.style.textAlign = 'center';
           lineHeading.textContent = "Airport Express";
         } else if(line == "SIL"){
           lineHeading.textContent = "South Island Line";
+        } else if(line == 'DRL'){
+          lineHeading.textContent = "Disneyland Resort Line";
         }
 
 

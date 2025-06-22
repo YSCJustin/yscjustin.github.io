@@ -228,7 +228,7 @@ input:checked + .slider:before {
   
     <h5>YSCJustin<br><a href ="https://yscjustin.github.io">home</a> <a href="https://yscjustin.github.io/projects">projects</a> <a href ="https://github.com/YSCJustin">GitHub</a></h5>
     <div class="toggle-container">
-      <label for="toggle-gradient">Gradient Animation<br>(Affect CPU Performance)</label>
+      <label for="toggle-gradient">Gradient Animation<br>(May cause performance issues)</label>
       <label class="switch">
 
      
@@ -253,6 +253,7 @@ input:checked + .slider:before {
               <option value="TML">Tuen Ma Line</option>
               <option value="EAL">East Rail Line</option>
               <option value="SIL">South Island Line</option>
+              <option value="DRL">Disneyland Resort Line</option>
             </select>
         
             <label for="station-select"id="station-label"style="display: none;">Select a station:</label>
@@ -270,7 +271,7 @@ input:checked + .slider:before {
           <div id="train-schedule" class="center"></div>
         
           <script src="script.js"></script>
-          <footer>Data is from <a href ="https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data" target="_blank">MTR API</a> provided by MTR Corporation Limited.<br>All intellectual property rights in the data belong to the Government of the Hong Kong Special Administrative Region. For more information, please see the <a href="https://data.gov.hk/en/terms-and-conditions" target ="_blank">Terms of Use</a> .<br>DIL (Disneyland Line) is not yet available.<br>Please note that the "Time Until Arrival" won't update automatically. To refresh the data, click "Get train schedule" again.<br><br>YSCJustin <span id="current-year"></span></footer>
+          <footer>Data is from <a href ="https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data" target="_blank">MTR API</a> provided by MTR Corporation Limited.<br>All intellectual property rights in the data belong to the Government of the Hong Kong Special Administrative Region. For more information, please see the <a href="https://data.gov.hk/en/terms-and-conditions" target ="_blank">Terms of Use</a>.<br>Please note that the "Time Until Arrival" won't update automatically. To refresh the data, click "Get train schedule" again.<br><br>YSCJustin <span id="current-year"></span></footer>
           
   </body>
 </html>
